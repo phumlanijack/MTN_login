@@ -69,6 +69,10 @@ input{
     border: 1px solid #b5b5b5;
     outline: none;
 }
+.inputs{
+    margin-top: -20px;
+    margin-left: 0px;
+}
     
     
     
