@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## What to improve
+
+This project is just a login page that is not calling any back-end service, this project can be
+improved in the near future.
+1. The form field can be change to be a common component, should the disgin team confirm that      input like that must be used across the application
+2. The button can be change to be common component as well
+3. bootstrap style needs to be downloaded and add to our local invironment instead of using the links
+4. ngrx can be used to manage router and update the movement of the application 
