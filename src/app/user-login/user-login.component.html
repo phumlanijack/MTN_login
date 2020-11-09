@@ -1,0 +1,34 @@
+<div class="login-reg-panel">
+
+    <div class="register-info-box">
+        <h2>Don't have an account?</h2>
+        <p>Click register right now!!</p>
+        <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Register</button>
+    </div>
+
+    <div class="white-panel">
+        <form [formGroup]="loginForm" style="width: 90%; margin-left:5%; margin-top: 20%;">
+            <h2>Login</h2>
+            <div class="form-row">
+                <input formControlName="email" class="form-control" type="email" placeholder="Email"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                    <div style="margin-top: -20px; float: left;" *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+            </div>
+
+            <div class="form-row">
+                <input formControlName="password" class="form-control" type="password" placeholder="password"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                </div>
+            </div>
+            <a style="float: left;" href="">Forgot password?</a>
+            <button (click)="onSubmit()" style="float: right;" type="button"
+                class="btn btn-outline-primary btn-rounded waves-effect">Login</button>
+        </form>
+    </div>
+</div>
